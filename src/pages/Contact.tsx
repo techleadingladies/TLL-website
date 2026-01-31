@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
             <input
               type="hidden"
               name="access_key"
-              value="4d49fe68-09d3-4f8a-9484-acce9cb3cc2c"
+              value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string}
             />
 
             {/* Custom subject line */}
