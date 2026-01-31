@@ -87,7 +87,7 @@ const SpeakerForm: React.FC = () => {
             <input
               type="hidden"
               name="access_key"
-              value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string}
+              value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY}
             />
 
             {/* Custom subject line */}
