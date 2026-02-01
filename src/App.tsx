@@ -14,7 +14,11 @@ import Contact from "./pages/Contact";
 import Meetup from "./pages/Meetup";
 import CodeOfConduct from "./pages/CodeOfConduct";
 import SpeakerForm from "./pages/SpeakerForm";
-import FAQ from './pages/FAQ';
+import FAQ from "./pages/FAQ";
+import MentoringProgram from "./pages/MentoringProgram";
+import SlackCommunity from "./pages/SlackCommunity";
+import ShareYourStory from "./pages/ShareYourStory";
+import LeadershipTraining from "./pages/LeadershipTraining";
 
 function App() {
   return (
@@ -31,6 +35,10 @@ function App() {
           <Route path="/code-of-conduct" element={<CodeOfConduct />} />
           <Route path="/speaker-details-form" element={<SpeakerForm />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/mentoring-program" element={<MentoringProgram />} />
+          <Route path="/slack-community" element={<SlackCommunity />} />
+          <Route path="/share-your-story" element={<ShareYourStory />} />
+          <Route path="/leadership-training" element={<LeadershipTraining />} />
         </Routes>
         <Footer />
       </div>

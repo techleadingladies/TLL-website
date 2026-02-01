@@ -70,7 +70,7 @@ const SpeakerForm: React.FC = () => {
               technical leader needs to know about your subject to help them build strategy and make good
               decisions. The audience will mostly be senior developers, product managers and tech leads: feel
               free to get deeply technical. You can see our{' '}
-              <a href="#" className="text-purple-600 hover:text-purple-700 font-semibold">
+              <a href="https://www.meetup.com/tech-leading-ladies/events/past/" className="text-purple-600 hover:text-purple-700 font-semibold">
                 past topics here
               </a>
               .
@@ -80,7 +80,7 @@ const SpeakerForm: React.FC = () => {
       </section>
 
       {/* Form Section */}
-      <section className="py-20">
+      <section>
         <div className="max-w-2xl mx-auto px-6">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Web3Forms Access Key */}

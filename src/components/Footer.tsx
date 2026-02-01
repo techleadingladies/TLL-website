@@ -21,10 +21,10 @@ const Footer: React.FC = () => {
             <h4 className="font-bold text-gray-900 mb-4">Programs</h4>
             <ul className="space-y-2">
               <li><Link to="/sponsors" className="text-gray-600 hover:text-purple-600">Sponsors</Link></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Mentoring Program</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Slack Community</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Share your story</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Leadership training</a></li>
+              <li><a href="/mentoring-program" className="text-gray-600 hover:text-purple-600">Mentoring Program</a></li>
+              <li><a href="/slack-community" className="text-gray-600 hover:text-purple-600">Slack Community</a></li>
+              <li><a href="/share-your-story" className="text-gray-600 hover:text-purple-600">Share your story</a></li>
+              <li><a href="/leadership-training" className="text-gray-600 hover:text-purple-600">Leadership training</a></li>
             </ul>
           </div>
           <div className="md:col-span-2">
