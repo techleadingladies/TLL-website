@@ -159,10 +159,10 @@ const TechLeadingLadies: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-6 py-32 relative z-10 w-full">
           <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="md:text-5xl lg:text-6xl font-bold text-white mb-6 !leading-[1.4]">
               Bridging The Gender Gap In Tech Leadership
             </h1>
-            <p className="text-md md:text-lg text-white/95 mb-8 leading-relaxed font-light">
+            <p className="text-md md:text-xl text-white/95 mb-8 !leading-[1.6] font-light">
               Tech Leading Ladies is a community group of women identifying and
               non-binary members who work in software development and technology
               roles.
