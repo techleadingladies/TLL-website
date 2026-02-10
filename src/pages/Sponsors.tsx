@@ -6,9 +6,7 @@ import blockLogo from "../assets/logo/block_lockup-horizontal_positive_alpha_pad
 import rebootLogo from "../assets/logo/RebootCo_MainLogo_Blue.png";
 import rome2rioLogo from "../assets/logo/On-white-background.png";
 import iterateLogo from "../assets/logo/iterate.png";
-import blackmillLogo from "../assets/logo/blackmill.png";
 import donutLogo from "../assets/logo/donut.png";
-import fastmailLogo from "../assets/logo/fastmail.png";
 
 const Sponsors: React.FC = () => {
   const silverSponsors = [
