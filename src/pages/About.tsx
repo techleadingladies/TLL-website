@@ -1,58 +1,50 @@
 import React from "react";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 import susanBranderImage from "../assets/images/organisers/SusanBrander.jpg";
 import lindaLaiImage from "../assets/images/organisers/LindaLai.jpg";
 import michaelPlayfairImage from "../assets/images/organisers/MichelePlayfair.jpg";
 import shannonRoweImage from "../assets/images/organisers/ShannonRowe.jpg";
-import tracyMariePowellImage from "../assets/images/organisers/TracyMariePowell.jpg";
-import elleMeredithImage from "../assets/images/organisers/ElleMeredith.jpg";
-import michelleGleesonImage from "../assets/images/organisers/MichelleGleeson.jpg";
+import tracyBongiornoImage from "../assets/images/organisers/TracyMariePowell.jpg";
+import jazWilsonImage from "../assets/images/organisers/JazWilson.jpeg";
 
 const About: React.FC = () => {
   const teamMembers = [
     {
-      name: "Michelle Gleeson",
-      role: "Founder and Organiser",
-      image: michelleGleesonImage,
-      linkedin: "https://www.linkedin.com/in/michellegleeson/",
-    },
-    {
       name: "Susan Brander",
-      role: "Co-Organiser",
+      role: "Co-Founder and Organiser",
       image: susanBranderImage,
       linkedin: "https://www.linkedin.com/in/susan-brander/",
     },
     {
       name: "Linda Lai",
-      role: "Co-Organiser",
+      role: "Meet Up Organiser",
       image: lindaLaiImage,
       linkedin: "https://www.linkedin.com/in/lindalai/",
     },
     {
-      name: "Tracy Marie Powell",
-      role: "Program Lead, Mentoring",
-      image: tracyMariePowellImage,
-      linkedin: "https://www.linkedin.com/in/tracymariepowell/",
-    },
-    {
-      name: "Elle Meredith",
-      role: "Program Lead, Leadership Training",
-      image: elleMeredithImage,
-      linkedin: "https://www.linkedin.com/in/ellemeredith/",
+      name: "Tracy Bongiorno",
+      role: "Mentoring Program Lead",
+      image: tracyBongiornoImage,
+      linkedin: "https://www.linkedin.com/in/trmpowell/",
     },
     {
       name: "Shannon Rowe",
-      role: "Program Lead, Next Gig",
+      role: "Meet Up Organiser",
       image: shannonRoweImage,
       linkedin: "https://www.linkedin.com/in/shannonrowe/",
-      twitter: "https://twitter.com/shannonrowe",
     },
     {
       name: "Michele Playfair",
-      role: "Program Lead, Speaker Support",
+      role: "Meet Up Program Lead, Speaker Support",
       image: michaelPlayfairImage,
       linkedin: "https://www.linkedin.com/in/micheleplayfair/",
+    },
+    {
+      name: "Jasmine Wilson",
+      role: "Meet Up Organiser",
+      image: jazWilsonImage,
+      linkedin: "https://www.linkedin.com/in/jjwilson2/",
     },
   ];
 
@@ -149,16 +141,6 @@ const About: React.FC = () => {
                       className="text-purple-600 hover:text-purple-700 transition"
                     >
                       <Linkedin size={20} />
-                    </a>
-                  )}
-                  {member.twitter && (
-                    <a
-                      href={member.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-purple-600 hover:text-purple-700 transition"
-                    >
-                      <Twitter size={20} />
                     </a>
                   )}
                 </div>

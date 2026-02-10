@@ -9,9 +9,7 @@ import blockLogo from "../assets/logo/block_lockup-horizontal_positive_alpha_pad
 import rebootLogo from "../assets/logo/RebootCo_MainLogo_Blue.png";
 import rome2rioLogo from "../assets/logo/On-white-background.png";
 import iterateLogo from "../assets/logo/iterate.png";
-import blackmillLogo from "../assets/logo/blackmill.png";
 import donutLogo from "../assets/logo/donut.png";
-import fastmailLogo from "../assets/logo/fastmail.png";
 import bannerImage from "../assets/images/background/banner.jpg";
 import michelleGleesonImage from "../assets/images/organisers/MichelleGleeson.jpg";
 import susanBranderImage from "../assets/images/organisers/SusanBrander.jpg";
@@ -80,13 +78,7 @@ const TechLeadingLadies: React.FC = () => {
         logo: iterateLogo,
         url: "https://www.iteraterecruitment.com/",
       },
-      { name: "Blackmill", logo: blackmillLogo, url: "https://blackmill.co/" },
       { name: "Donut", logo: donutLogo, url: "https://www.donut.com/" },
-      {
-        name: "Fastmail",
-        logo: fastmailLogo,
-        url: "https://www.fastmail.com/",
-      },
     ],
   };
 
@@ -167,10 +159,10 @@ const TechLeadingLadies: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-6 py-32 relative z-10 w-full">
           <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            <h1 className="md:text-5xl lg:text-6xl font-bold text-white mb-6 !leading-[1.4]">
               Bridging The Gender Gap In Tech Leadership
             </h1>
-            <p className="text-md md:text-lg text-white/95 mb-8 leading-relaxed font-light">
+            <p className="text-md md:text-xl text-white/95 mb-8 !leading-[1.6] font-light">
               Tech Leading Ladies is a community group of women identifying and
               non-binary members who work in software development and technology
               roles.
@@ -185,17 +177,12 @@ const TechLeadingLadies: React.FC = () => {
         </div>
 
         {/* Smooth Wave Divider */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-          <svg
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            className="relative block w-full h-[100px] md:h-[150px]"
-          >
-            <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z"
-              fill="#ffffff"
-            ></path>
-          </svg>
+        <div className="wrap-divider" data-height="350" data-front="" data-style="waves_opacity_alt" data-position="bottom"><svg aria-hidden="true" fill="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+          <path className="divider" d="M 1000 299 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z" style={{ opacity: 0.15 }}></path>
+          <path d="M 1000 286 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z" style={{ opacity: 0.3 }}></path>
+          <path d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
+        </svg>
+
         </div>
       </section>
 
@@ -233,7 +220,7 @@ const TechLeadingLadies: React.FC = () => {
             <h3 className="text-3xl font-normal text-center mb-16 text-gray-800">
               Community
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 items-center justify-items-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 items-center justify-items-center">
               {sponsors.community.map((sponsor, index) => (
                 <a
                   key={index}
@@ -309,79 +296,79 @@ const TechLeadingLadies: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-<section className="bg-gradient-blue relative h-[700px] flex items-center">
-  <div className="max-w-6xl mx-auto px-6 w-full">
-    <h2 className="text-2xl md:text-3xl text-center text-white">
-      What They're Saying
-    </h2>
-    <div className="relative h-[400px] flex items-center">
-      <div className="text-center transition-opacity duration-500 w-full">
-        {testimonials[currentTestimonial].image && (
-          <div className="mb-4 flex justify-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center overflow-hidden ring-4 ring-white/30">
-              <img
-                src={testimonials[currentTestimonial].image}
-                alt={testimonials[currentTestimonial].author}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  target.style.display = "none";
-                  if (target.parentElement) {
-                    const initial =
-                      testimonials[currentTestimonial].author.charAt(0);
-                    target.parentElement.innerHTML = `<div class="text-3xl font-bold text-blue-600">${initial}</div>`;
-                  }
-                }}
-              />
+      <section className="bg-gradient-blue relative h-[700px] flex items-center">
+        <div className="max-w-6xl mx-auto px-6 w-full">
+          <h2 className="text-2xl md:text-3xl text-center text-white">
+            What They're Saying
+          </h2>
+          <div className="relative h-[400px] flex items-center">
+            <div className="text-center transition-opacity duration-500 w-full">
+              {testimonials[currentTestimonial].image && (
+                <div className="mb-4 flex justify-center">
+                  <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center overflow-hidden ring-4 ring-white/30">
+                    <img
+                      src={testimonials[currentTestimonial].image}
+                      alt={testimonials[currentTestimonial].author}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        target.style.display = "none";
+                        if (target.parentElement) {
+                          const initial =
+                            testimonials[currentTestimonial].author.charAt(0);
+                          target.parentElement.innerHTML = `<div class="text-3xl font-bold text-blue-600">${initial}</div>`;
+                        }
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Remove fixed height, use padding instead */}
+              <div className="flex items-center justify-center px-4">
+                <p className="text-md md:text-lg text-white leading-relaxed max-w-4xl mx-auto font-light">
+                  "{testimonials[currentTestimonial].text}"
+                </p>
+              </div>
+
+              {/* Consistent spacing */}
+              <div className="text-white mb-2 mt-8">
+                <p className="font-semibold text-xl mb-1">
+                  {testimonials[currentTestimonial].author}
+                </p>
+                <p className="text-white/90 text-base font-light">
+                  {testimonials[currentTestimonial].role}
+                </p>
+              </div>
+              <div className="text-white font-semibold text-lg">
+                {currentTestimonial + 1} / {testimonials.length}
+              </div>
             </div>
+
+            <button
+              onClick={() =>
+                setCurrentTestimonial(
+                  (prev) =>
+                    (prev - 1 + testimonials.length) % testimonials.length
+                )
+              }
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-blue-700/50 hover:bg-blue-700/70 text-white w-12 h-12 md:w-14 md:h-14 rounded-full transition flex items-center justify-center text-3xl"
+            >
+              ‹
+            </button>
+            <button
+              onClick={() =>
+                setCurrentTestimonial(
+                  (prev) => (prev + 1) % testimonials.length
+                )
+              }
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-blue-700/50 hover:bg-blue-700/70 text-white w-12 h-12 md:w-14 md:h-14 rounded-full transition flex items-center justify-center text-3xl"
+            >
+              ›
+            </button>
           </div>
-        )}
-
-        {/* Remove fixed height, use padding instead */}
-        <div className="flex items-center justify-center px-4">
-          <p className="text-md md:text-lg text-white leading-relaxed max-w-4xl mx-auto font-light">
-            "{testimonials[currentTestimonial].text}"
-          </p>
         </div>
-
-        {/* Consistent spacing */}
-        <div className="text-white mb-2 mt-8">
-          <p className="font-semibold text-xl mb-1">
-            {testimonials[currentTestimonial].author}
-          </p>
-          <p className="text-white/90 text-base font-light">
-            {testimonials[currentTestimonial].role}
-          </p>
-        </div>
-        <div className="text-white font-semibold text-lg">
-          {currentTestimonial + 1} / {testimonials.length}
-        </div>
-      </div>
-
-      <button
-        onClick={() =>
-          setCurrentTestimonial(
-            (prev) =>
-              (prev - 1 + testimonials.length) % testimonials.length
-          )
-        }
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-blue-700/50 hover:bg-blue-700/70 text-white w-12 h-12 md:w-14 md:h-14 rounded-full transition flex items-center justify-center text-3xl"
-      >
-        ‹
-      </button>
-      <button
-        onClick={() =>
-          setCurrentTestimonial(
-            (prev) => (prev + 1) % testimonials.length
-          )
-        }
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-blue-700/50 hover:bg-blue-700/70 text-white w-12 h-12 md:w-14 md:h-14 rounded-full transition flex items-center justify-center text-3xl"
-      >
-        ›
-      </button>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Blog Posts Section */}
       <section id="blog" className="py-20 bg-white">

@@ -67,10 +67,10 @@ const CodeOfConduct: React.FC = () => {
                   notice that someone else is being harassed, or have any other
                   concerns, please contact the organising team at{" "}
                   <a
-                    href="mailto:techleadingladies@gmail.com"
+                    href="mailto:organisers@techleadingladies.com"
                     className="text-purple-600 hover:text-purple-700 font-semibold"
                   >
-                    techleadingladies@gmail.com
+                    organisers@techleadingladies.com
                   </a>{" "}
                   or via Slack. If the person who is harassing you is on the
                   team, they will recuse themselves from handling your incident.

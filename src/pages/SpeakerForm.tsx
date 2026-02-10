@@ -119,7 +119,7 @@ const SpeakerForm: React.FC = () => {
               <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                 <p className="text-red-800 font-medium">
                   ✗ Oops! Something went wrong. Please try again or email us directly at
-                  techleadingladies@gmail.com
+                  organisers@techleadingladies.com
                 </p>
               </div>
             )}
@@ -338,15 +338,15 @@ const SpeakerForm: React.FC = () => {
               />
             </div>
 
-            {/* Twitter URL */}
+            {/* Altnerative Social Media URL */}
             <div>
-              <label htmlFor="twitter" className="block text-gray-900 font-semibold mb-2">
-                Twitter URL
+              <label htmlFor="other-socials" className="block text-gray-900 font-semibold mb-2">
+                Other Social Media Profile URL
               </label>
               <input
                 type="url"
-                id="twitter"
-                name="twitter"
+                id="other-socials"
+                name="other-socials"
                 disabled={isSubmitting}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition disabled:bg-gray-100"
               />
