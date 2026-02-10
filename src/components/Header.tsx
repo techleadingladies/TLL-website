@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Twitter, Linkedin, Github } from "lucide-react";
+import { Menu, Linkedin, Github } from "lucide-react";
 import tllLogoWhite from "../assets/logo/tll-logo-white-full.png";
 import tllLogoBlack from "../assets/logo/tll-logo-black-full.png";
 
@@ -114,19 +114,6 @@ const Header: React.FC = () => {
             </Link>
             <div className="flex items-center space-x-4 ml-4">
               <a
-                href="https://twitter.com/techleadladies"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter
-                  className={`w-5 h-5 cursor-pointer transition ${
-                    isScrolled || !isHomePage
-                      ? "text-gray-600 hover:text-purple-600"
-                      : "text-white hover:text-purple-200"
-                  }`}
-                />
-              </a>
-              <a
                 href="https://www.linkedin.com/company/tech-leading-ladies/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -156,23 +143,15 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <button 
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? (
-              <X
-                className={
-                  isScrolled || !isHomePage ? "text-gray-900" : "text-white"
-                }
-              />
-            ) : (
-              <Menu
-                className={
-                  isScrolled || !isHomePage ? "text-gray-900" : "text-white"
-                }
-              />
-            )}
+            <Menu
+              className={isScrolled || !isHomePage ? "text-gray-900" : "text-white"}
+            />
           </button>
         </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 import susanBranderImage from "../assets/images/organisers/SusanBrander.jpg";
 import lindaLaiImage from "../assets/images/organisers/LindaLai.jpg";
@@ -46,7 +46,6 @@ const About: React.FC = () => {
       role: "Program Lead, Next Gig",
       image: shannonRoweImage,
       linkedin: "https://www.linkedin.com/in/shannonrowe/",
-      twitter: "https://twitter.com/shannonrowe",
     },
     {
       name: "Michele Playfair",
@@ -149,16 +148,6 @@ const About: React.FC = () => {
                       className="text-purple-600 hover:text-purple-700 transition"
                     >
                       <Linkedin size={20} />
-                    </a>
-                  )}
-                  {member.twitter && (
-                    <a
-                      href={member.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-purple-600 hover:text-purple-700 transition"
-                    >
-                      <Twitter size={20} />
                     </a>
                   )}
                 </div>

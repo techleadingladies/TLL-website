@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Menu, X, Twitter, Linkedin, Github } from 'lucide-react';
+import { Search, Menu, Linkedin, Github } from 'lucide-react';
 import tllLogo from '../assets/logo/TechLeadingLadies-logo.png';
 
 const Navigation: React.FC = () => {
@@ -86,9 +86,6 @@ const Navigation: React.FC = () => {
               Sponsors
             </Link>
             <div className="flex items-center space-x-4 ml-4">
-              <a href="https://twitter.com/techleadladies" target="_blank" rel="noopener noreferrer">
-                <Twitter className={`w-5 h-5 cursor-pointer ${isScrolled || !isHomePage ? 'text-gray-600' : 'text-white'}`} />
-              </a>
               <a href="https://www.linkedin.com/company/tech-leading-ladies/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className={`w-5 h-5 cursor-pointer ${isScrolled || !isHomePage ? 'text-gray-600' : 'text-white'}`} />
               </a>
@@ -104,10 +101,7 @@ const Navigation: React.FC = () => {
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? 
-              <X className={isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'} /> : 
-              <Menu className={isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'} />
-            }
+            <Menu className={isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'} />
           </button>
         </div>
 
