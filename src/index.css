@@ -36,6 +36,29 @@
   }
 }
 
+@layer components {
+  .wrap-divider{
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    transform: translateZ(0);
+    margin-left: calc(-50vw + var(--scroll-bar-w) / 2);
+    width: calc(100vw - var(--scroll-bar-w));
+    height: 350px;
+  }
+
+  .wrap-divider svg {
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    height: 100%;
+    position: absolute;
+    fill: #fff;
+  }
+}
 @layer utilities {
   .nav-scrolled {
     @apply bg-white/98 shadow-[0_2px_20px_rgba(0,0,0,0.1)];
