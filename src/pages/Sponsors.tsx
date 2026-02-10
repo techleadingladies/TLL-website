@@ -46,19 +46,9 @@ const Sponsors: React.FC = () => {
       url: "https://www.iteraterecruitment.com/",
     },
     {
-      name: "Blackmill",
-      logo: blackmillLogo,
-      url: "https://blackmill.co/",
-    },
-    {
       name: "Donut",
       logo: donutLogo,
       url: "https://www.donut.com/",
-    },
-    {
-      name: "Fastmail",
-      logo: fastmailLogo,
-      url: "https://www.fastmail.com/",
     },
   ];
 
@@ -113,7 +103,7 @@ const Sponsors: React.FC = () => {
             Community Sponsors
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 items-center justify-items-center">
+          <div className="grid md:grid-cols-4 gap-12 items-center justify-items-center">
             {communitySponsors.map((sponsor, index) => (
               <a
                 key={index}
