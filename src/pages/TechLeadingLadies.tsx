@@ -9,9 +9,7 @@ import blockLogo from "../assets/logo/block_lockup-horizontal_positive_alpha_pad
 import rebootLogo from "../assets/logo/RebootCo_MainLogo_Blue.png";
 import rome2rioLogo from "../assets/logo/On-white-background.png";
 import iterateLogo from "../assets/logo/iterate.png";
-import blackmillLogo from "../assets/logo/blackmill.png";
 import donutLogo from "../assets/logo/donut.png";
-import fastmailLogo from "../assets/logo/fastmail.png";
 import bannerImage from "../assets/images/background/banner.jpg";
 import michelleGleesonImage from "../assets/images/organisers/MichelleGleeson.jpg";
 import susanBranderImage from "../assets/images/organisers/SusanBrander.jpg";
@@ -80,13 +78,7 @@ const TechLeadingLadies: React.FC = () => {
         logo: iterateLogo,
         url: "https://www.iteraterecruitment.com/",
       },
-      { name: "Blackmill", logo: blackmillLogo, url: "https://blackmill.co/" },
       { name: "Donut", logo: donutLogo, url: "https://www.donut.com/" },
-      {
-        name: "Fastmail",
-        logo: fastmailLogo,
-        url: "https://www.fastmail.com/",
-      },
     ],
   };
 
@@ -228,7 +220,7 @@ const TechLeadingLadies: React.FC = () => {
             <h3 className="text-3xl font-normal text-center mb-16 text-gray-800">
               Community
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 items-center justify-items-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 items-center justify-items-center">
               {sponsors.community.map((sponsor, index) => (
                 <a
                   key={index}
