@@ -126,13 +126,13 @@ const TechLeadingLadies: React.FC = () => {
     },
     {
       category: "Meetup Summary",
-      title: "Meetup Summary – Building Robust AI Products",
+      title: "Meetup Summary - Building Robust AI Products",
       excerpt:
         "Welcome back! 👋 We're excited to be kicking off Tech Leading Ladies in 2024 with some amazing speakers and your favourite programs lined up for…",
     },
     {
       category: "Meetup Summary",
-      title: "Meetup Summary – Startin' Something",
+      title: "Meetup Summary - Startin' Something",
       excerpt:
         "(Cue music: 🎶 I said you wanna be startin' something, you got to be startin' something 🎶) The Tech Leading Ladies October meetup featured Lucy…",
     },

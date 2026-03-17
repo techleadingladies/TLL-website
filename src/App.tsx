@@ -19,6 +19,9 @@ import MentoringProgram from "./pages/MentoringProgram";
 import SlackCommunity from "./pages/SlackCommunity";
 import ShareYourStory from "./pages/ShareYourStory";
 import LeadershipTraining from "./pages/LeadershipTraining";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import AuthorProfile from "./pages/AuthorProfile";
 
 function App() {
   return (
@@ -39,6 +42,9 @@ function App() {
           <Route path="/slack-community" element={<SlackCommunity />} />
           <Route path="/share-your-story" element={<ShareYourStory />} />
           <Route path="/leadership-training" element={<LeadershipTraining />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/author/:authorSlug" element={<AuthorProfile />} />
         </Routes>
         <Footer />
       </div>

@@ -71,7 +71,7 @@ const Header: React.FC = () => {
             </Link>
 
             <a
-              href="#blog"
+              href="/blog"
               className={`font-medium transition ${
                 isScrolled || !isHomePage
                   ? "text-gray-900 hover:text-purple-600"
@@ -178,7 +178,7 @@ const Header: React.FC = () => {
                 About
               </Link>
               <a
-                href="#blog"
+                href="/blog"
                 className={`font-medium ${
                   isScrolled || !isHomePage ? "text-gray-900" : "text-white"
                 }`}

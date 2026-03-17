@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
               About
             </Link>
             <a 
-              href="#blog" 
+              href="/blog" 
               className={`font-medium transition ${
                 isScrolled || !isHomePage 
                   ? 'text-gray-900 hover:text-purple-600' 
@@ -111,7 +111,7 @@ const Navigation: React.FC = () => {
             <div className="flex flex-col space-y-4">
               <Link to="/" className={`font-medium ${isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'}`}>Home</Link>
               <Link to="/about" className={`font-medium ${isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'}`}>About</Link>
-              <a href="#blog" className={`font-medium ${isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'}`}>Blog</a>
+              <a href="/blog" className={`font-medium ${isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'}`}>Blog</a>
               <a href="#meetup" className={`font-medium ${isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'}`}>Meetup</a>
               <Link to="/sponsors" className={`font-medium ${isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'}`}>Sponsors</Link>
             </div>
