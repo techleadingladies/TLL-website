@@ -5,6 +5,8 @@ const SpeakerForm: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [showPronounInfo, setShowPronounInfo] = useState(false);
+  const [photoPreference, setPhotoPreference] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,8 +26,6 @@ const SpeakerForm: React.FC = () => {
 
       if (response.ok) {
         setSubmitStatus("success");
-        form.reset();
-        setTimeout(() => setSubmitStatus("idle"), 5000);
       } else {
         console.error("Form submission failed:", data);
         setSubmitStatus("error");
@@ -37,6 +37,27 @@ const SpeakerForm: React.FC = () => {
       setIsSubmitting(false);
     }
   };
+
+  if (submitStatus === "success") {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-6">
+        <div className="max-w-lg w-full bg-white rounded-2xl shadow-sm p-12 text-center">
+          <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">You're all set!</h1>
+          <p className="text-lg text-gray-600 font-light leading-relaxed">
+            Thank you for submitting your speaker details. Our community manager will be in touch with you soon.
+          </p>
+          <p className="text-gray-500 font-light mt-4">
+            We can't wait to have you present at Tech Leading Ladies!
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -80,7 +101,7 @@ const SpeakerForm: React.FC = () => {
       </section>
 
       {/* Form Section */}
-      <section>
+      <section className="py-16">
         <div className="max-w-2xl mx-auto px-6">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Web3Forms Access Key */}
@@ -104,15 +125,6 @@ const SpeakerForm: React.FC = () => {
               className="hidden"
               style={{ display: "none" }}
             />
-
-            {/* Success Message */}
-            {submitStatus === "success" && (
-              <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-green-800 font-medium">
-                  ✓ Thank you! Your speaker submission has been received. We'll be in touch soon!
-                </p>
-              </div>
-            )}
 
             {/* Error Message */}
             {submitStatus === "error" && (
@@ -169,10 +181,24 @@ const SpeakerForm: React.FC = () => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition disabled:bg-gray-100"
               />
               <p className="text-sm text-gray-600 mt-1">
-                <a href="#" className="text-purple-600 hover:text-purple-700">
+                <button
+                  type="button"
+                  onClick={() => setShowPronounInfo(!showPronounInfo)}
+                  className="text-purple-600 hover:text-purple-700 underline"
+                >
                   Why do pronouns matter?
-                </a>
+                </button>
               </p>
+              {showPronounInfo && (
+                <div className="mt-2 p-4 bg-purple-50 border border-purple-100 rounded-lg text-sm text-gray-700 leading-relaxed">
+                  <p>
+                    Using someone's correct pronouns is a simple way to show respect and make people feel welcome. Misgendering someone — even accidentally — can be hurtful and exclusionary.
+                  </p>
+                  <p className="mt-2">
+                    At Tech Leading Ladies we're committed to creating an inclusive space for women-identifying and non-binary people. Sharing your pronouns helps our organisers and audience address you correctly in introductions, slides, and conversation.
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Title or short description */}
@@ -241,86 +267,7 @@ const SpeakerForm: React.FC = () => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition resize-none disabled:bg-gray-100"
               />
               <p className="text-sm text-gray-600 mt-1">
-                Or, type "Panel" if you're participating in a panel.
-              </p>
-            </div>
-
-            {/* Lightning Talk */}
-            <div>
-              <label className="block text-gray-900 font-semibold mb-3">
-                Is this a lightning talk? <span className="text-red-500">*</span>
-              </label>
-              <div className="space-y-2">
-                <label className="flex items-center">
-                  <input
-                    type="radio"
-                    name="lightning_talk"
-                    value="yes"
-                    required
-                    disabled={isSubmitting}
-                    className="mr-2"
-                  />
-                  <span className="text-gray-700">Yes</span>
-                </label>
-                <label className="flex items-center">
-                  <input
-                    type="radio"
-                    name="lightning_talk"
-                    value="no"
-                    required
-                    disabled={isSubmitting}
-                    className="mr-2"
-                  />
-                  <span className="text-gray-700">No</span>
-                </label>
-              </div>
-              <p className="text-sm text-gray-600 mt-2">
-                Lightning talks are run before the main presentation and run for 5-15 minutes.
-              </p>
-            </div>
-
-            {/* Recording Permission */}
-            <div>
-              <label className="block text-gray-900 font-semibold mb-3">
-                Would you be okay if we recorded the presentation? <span className="text-red-500">*</span>
-              </label>
-              <div className="space-y-2">
-                <label className="flex items-start">
-                  <input
-                    type="radio"
-                    name="recording_permission"
-                    value="organisers_only"
-                    required
-                    disabled={isSubmitting}
-                    className="mr-2 mt-1"
-                  />
-                  <span className="text-gray-700">Yes, I'm fine with it being recorded for organisers viewing only</span>
-                </label>
-                <label className="flex items-start">
-                  <input
-                    type="radio"
-                    name="recording_permission"
-                    value="slack_community"
-                    required
-                    disabled={isSubmitting}
-                    className="mr-2 mt-1"
-                  />
-                  <span className="text-gray-700">Yes, I'm fine with the recording being shared in the Slack community</span>
-                </label>
-                <label className="flex items-start">
-                  <input
-                    type="radio"
-                    name="recording_permission"
-                    value="no_recording"
-                    required
-                    disabled={isSubmitting}
-                    className="mr-2 mt-1"
-                  />
-                  <span className="text-gray-700">No, I prefer to not to be recorded at all</span>
-                </label>
-              </div>
-              <p className="text-sm text-gray-600 mt-2">
-                The recording will be used to help organisers write a "Key Takeaways" blog post, after the event.
+                This will be used to create and promote the event. Or, type "Panel" if you're participating in a panel.
               </p>
             </div>
 
@@ -338,7 +285,7 @@ const SpeakerForm: React.FC = () => {
               />
             </div>
 
-            {/* Altnerative Social Media URL */}
+            {/* Alternative Social Media URL */}
             <div>
               <label htmlFor="other-socials" className="block text-gray-900 font-semibold mb-2">
                 Other Social Media Profile URL
@@ -363,6 +310,7 @@ const SpeakerForm: React.FC = () => {
                     value="no_photo"
                     disabled={isSubmitting}
                     className="mr-2"
+                    onChange={(e) => setPhotoPreference(e.target.value)}
                   />
                   <span className="text-gray-700">I would prefer not to use a photo</span>
                 </label>
@@ -373,6 +321,7 @@ const SpeakerForm: React.FC = () => {
                     value="linkedin_photo"
                     disabled={isSubmitting}
                     className="mr-2"
+                    onChange={(e) => setPhotoPreference(e.target.value)}
                   />
                   <span className="text-gray-700">Please use my photo from LinkedIn</span>
                 </label>
@@ -383,10 +332,23 @@ const SpeakerForm: React.FC = () => {
                     value="upload_photo"
                     disabled={isSubmitting}
                     className="mr-2"
+                    onChange={(e) => setPhotoPreference(e.target.value)}
                   />
                   <span className="text-gray-700">I'll upload a photo</span>
                 </label>
               </div>
+              {photoPreference === "upload_photo" && (
+                <div className="mt-4">
+                  <input
+                    type="file"
+                    name="photo"
+                    accept="image/*"
+                    disabled={isSubmitting}
+                    className="w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100 disabled:opacity-50"
+                  />
+                  <p className="text-sm text-gray-600 mt-1">Accepted formats: JPG, PNG, GIF. Max size 5MB.</p>
+                </div>
+              )}
             </div>
 
             {/* Short Bio */}
