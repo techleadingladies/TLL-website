@@ -2,7 +2,6 @@ import React from "react";
 
 import kaleidaLogo from "../assets/logo/Kaleida-colouful-kaleidoscope-logo.png";
 import cultureAmpLogo from "../assets/logo/CultureAmp.png";
-import blockLogo from "../assets/logo/block_lockup-horizontal_positive_alpha_padded_500x250.png";
 import rebootLogo from "../assets/logo/RebootCo_MainLogo_Blue.png";
 import rome2rioLogo from "../assets/logo/On-white-background.png";
 import iterateLogo from "../assets/logo/iterate.png";
@@ -19,11 +18,6 @@ const Sponsors: React.FC = () => {
       name: "Culture Amp",
       logo: cultureAmpLogo,
       url: "https://www.cultureamp.com/",
-    },
-    {
-      name: "Block",
-      logo: blockLogo,
-      url: "https://block.xyz/",
     },
   ];
 
@@ -74,7 +68,7 @@ const Sponsors: React.FC = () => {
             Silver Sponsors
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-16 items-center justify-items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center justify-items-center">
             {silverSponsors.map((sponsor, index) => (
               <a
                 key={index}
