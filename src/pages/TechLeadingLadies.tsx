@@ -5,7 +5,6 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 import kaleidaLogo from "../assets/logo/Kaleida-colouful-kaleidoscope-logo.png";
 import cultureAmpLogo from "../assets/logo/CultureAmp.png";
-import blockLogo from "../assets/logo/block_lockup-horizontal_positive_alpha_padded_500x250.png";
 import rebootLogo from "../assets/logo/RebootCo_MainLogo_Blue.png";
 import rome2rioLogo from "../assets/logo/On-white-background.png";
 import iterateLogo from "../assets/logo/iterate.png";
@@ -60,7 +59,6 @@ const TechLeadingLadies: React.FC = () => {
         logo: cultureAmpLogo,
         url: "https://www.cultureamp.com/",
       },
-      { name: "Block", logo: blockLogo, url: "https://block.xyz/" },
     ],
     community: [
       {
@@ -197,7 +195,7 @@ const TechLeadingLadies: React.FC = () => {
             <h3 className="text-3xl font-normal text-center mb-16 text-gray-800">
               Silver
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 items-center justify-items-center mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center mb-8">
               {sponsors.silver.map((sponsor, index) => (
                 <a
                   key={index}
