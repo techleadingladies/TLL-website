@@ -14,7 +14,6 @@ const SpeakerForm: React.FC = () => {
     setSubmitStatus("idle");
 
     const formData = new FormData(e.currentTarget);
-    const form = e.currentTarget;
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
