@@ -212,7 +212,7 @@ const TechLeadingLadies: React.FC = () => {
             <h3 className="text-3xl font-normal text-center mb-16 text-gray-800">
               Community
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 items-center justify-items-center">
+            <div className="grid md:grid-cols-3 gap-10 items-center justify-items-center">
               {sponsors.community.map((sponsor, index) => (
                 <a
                   key={index}

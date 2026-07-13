@@ -89,7 +89,7 @@ const Sponsors: React.FC = () => {
             Community Sponsors
           </h2>
 
-          <div className="grid md:grid-cols-4 gap-12 items-center justify-items-center">
+          <div className="grid md:grid-cols-3 gap-12 items-center justify-items-center">
             {communitySponsors.map((sponsor, index) => (
               <a
                 key={index}
