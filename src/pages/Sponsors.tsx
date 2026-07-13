@@ -3,7 +3,6 @@ import React from "react";
 import kaleidaLogo from "../assets/logo/Kaleida-colouful-kaleidoscope-logo.png";
 import cultureAmpLogo from "../assets/logo/CultureAmp.png";
 import rebootLogo from "../assets/logo/RebootCo_MainLogo_Blue.png";
-import rome2rioLogo from "../assets/logo/On-white-background.png";
 import iterateLogo from "../assets/logo/iterate.png";
 import donutLogo from "../assets/logo/donut.png";
 
@@ -26,11 +25,6 @@ const Sponsors: React.FC = () => {
       name: "ReBoot Co",
       logo: rebootLogo,
       url: "https://www.rebootco.com.au/",
-    },
-    {
-      name: "Rome2Rio",
-      logo: rome2rioLogo,
-      url: "https://www.rome2rio.com/",
     },
     {
       name: "iterate",
