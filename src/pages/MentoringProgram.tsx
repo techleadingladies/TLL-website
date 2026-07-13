@@ -48,6 +48,16 @@ const MentoringProgram: React.FC = () => {
           </h1>
 
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Tech Leading Ladies is working to bridge the gender gap in technical leadership.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6"> 
+            Our mentoring program aims to connect Tech Leading Ladies members so that we may learn from one another's experiences, support each other, and make lasting connections.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Joining our mentoring program is a great way to progress your career by getting help and guidance from other people or expanding your support and leadership abilities by helping others grow.
+          </p>
+
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
             We're excited to support a mentoring program (powered by{" "}
             <a
               href="https://www.mentorloop.com/"
@@ -57,8 +67,7 @@ const MentoringProgram: React.FC = () => {
             >
               Mentorloop
             </a>
-            ) at Tech Leading Ladies, we are open to both Mentors and Mentees. Please fill in your
-            details and our program manager will be in touch!
+            ) at Tech Leading Ladies, we are open to both Mentors and Mentees. Please fill in your details and our program manager will be in touch!
           </p>
         </div>
       </section>
@@ -67,7 +76,7 @@ const MentoringProgram: React.FC = () => {
       <section className="py-10">
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-8 text-gray-900">
-            Mentoring Expression Of Interest Form
+            Mentoring Program Expression Of Interest Form
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
