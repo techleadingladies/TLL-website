@@ -7,7 +7,7 @@ import iterateLogo from "../assets/logo/iterate.png";
 import donutLogo from "../assets/logo/donut.png";
 
 const Sponsors: React.FC = () => {
-  const silverSponsors = [
+  const goldSponsors = [
     {
       name: "Kaleida",
       logo: kaleidaLogo,
@@ -20,16 +20,19 @@ const Sponsors: React.FC = () => {
     },
   ];
 
+  const silverSponsors = [
+    {
+      name: "iterate",
+      logo: iterateLogo,
+      url: "https://www.iteraterecruitment.com/",
+    },
+  ];
+
   const communitySponsors = [
     {
       name: "ReBoot Co",
       logo: rebootLogo,
       url: "https://www.rebootco.com.au/",
-    },
-    {
-      name: "iterate",
-      logo: iterateLogo,
-      url: "https://www.iteraterecruitment.com/",
     },
     {
       name: "Donut",
@@ -55,15 +58,15 @@ const Sponsors: React.FC = () => {
         </div>
       </section>
 
-      {/* Silver Sponsors */}
+      {/* Gold Sponsors */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-semibold mb-16 text-gray-900">
-            Silver Sponsors
+            Gold Sponsors
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 items-center justify-items-center">
-            {silverSponsors.map((sponsor, index) => (
+            {goldSponsors.map((sponsor, index) => (
               <a
                 key={index}
                 href={sponsor.url}
@@ -82,6 +85,33 @@ const Sponsors: React.FC = () => {
         </div>
       </section>
 
+      {/* Silver Sponsors */}
+      <section className="pb-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-semibold mb-16 text-gray-900">
+            Silver Sponsors
+          </h2>
+
+          <div className="grid gap-8 items-center justify-items-center">
+            {silverSponsors.map((sponsor, index) => (
+              <a
+                key={index}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  className="max-w-[215px] h-auto object-contain"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Community Sponsors */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
@@ -89,7 +119,7 @@ const Sponsors: React.FC = () => {
             Community Sponsors
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-12 items-center justify-items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center justify-items-center">
             {communitySponsors.map((sponsor, index) => (
               <a
                 key={index}
