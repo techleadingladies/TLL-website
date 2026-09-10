@@ -51,7 +51,7 @@ const TechLeadingLadies: React.FC = () => {
   ];
 
   const sponsors = {
-    silver: [
+    gold: [
       { name: "Kaleida", logo: kaleidaLogo, url: "https://kaleida.team" },
       {
         name: "Culture Amp",
@@ -59,16 +59,18 @@ const TechLeadingLadies: React.FC = () => {
         url: "https://www.cultureamp.com/",
       },
     ],
+    silver: [
+      {
+        name: "iterate",
+        logo: iterateLogo,
+        url: "https://www.iteraterecruitment.com/",
+      },
+    ],
     community: [
       {
         name: "ReBoot Co",
         logo: rebootLogo,
         url: "https://www.rebootco.com.au/",
-      },
-      {
-        name: "iterate",
-        logo: iterateLogo,
-        url: "https://www.iteraterecruitment.com/",
       },
       { name: "Donut", logo: donutLogo, url: "https://www.donut.com/" },
     ],
@@ -185,12 +187,12 @@ const TechLeadingLadies: React.FC = () => {
             Sponsors
           </h2>
 
-          <div className="mt-20">
-            <h3 className="text-3xl font-normal text-center mb-16 text-gray-800">
-              Silver
+          <div className="mt-12">
+            <h3 className="text-2xl font-normal text-center mb-8 text-gray-800">
+              Gold
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center mb-8">
-              {sponsors.silver.map((sponsor, index) => (
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+              {sponsors.gold.map((sponsor, index) => (
                 <a
                   key={index}
                   href={sponsor.url}
@@ -208,11 +210,34 @@ const TechLeadingLadies: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-24">
-            <h3 className="text-3xl font-normal text-center mb-16 text-gray-800">
+          <div className="mt-14">
+            <h3 className="text-2xl font-normal text-center mb-8 text-gray-800">
+              Silver
+            </h3>
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+              {sponsors.silver.map((sponsor, index) => (
+                <a
+                  key={index}
+                  href={sponsor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform duration-300 hover:scale-105"
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="max-w-[180px] h-auto object-contain"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-2xl font-normal text-center mb-8 text-gray-800">
               Community
             </h3>
-            <div className="grid md:grid-cols-3 gap-10 items-center justify-items-center">
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
               {sponsors.community.map((sponsor, index) => (
                 <a
                   key={index}
